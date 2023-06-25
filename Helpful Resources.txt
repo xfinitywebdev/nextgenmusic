@@ -1,0 +1,8 @@
+<nav>
+        <span id="title-nav">NextGen</span>
+        <a href="/index.html">Home</a>
+        <a href="">Explore</a>
+        <a href="">Recently uploaded</a>
+        <a href="">Find an artist</a>
+        <a href="portal/File Summision Form/send-audio.html">Submit a song!</a>
+</nav>

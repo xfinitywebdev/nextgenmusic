@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    background: black;
+}
+
+nav {
+    background: grey;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 20px;
+    margin: 15px;
+}
+
+a:hover {
+    background: darkgrey;
+    padding: 15px;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+#title-nav {
+    color: white;
+    text-decoration: none;
+    font-family: 'Press Start 2P', Arial;
+    margin: 20px;
+}
+
+section {
+    border: 2px solid white;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+h2 {
+    color: white;
+    font-family: 'Press Start 2P', Courier, monospace;
+}
+
+p {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
