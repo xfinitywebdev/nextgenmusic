@@ -45,8 +45,61 @@ h2 {
     font-family: 'Press Start 2P', Courier, monospace;
 }
 
+h3 {
+    color: white;
+    font-family: 'Press Start 2P', Courier, monospace;
+}
+
+h1 {
+    color: white;
+    font-family: 'Press Start 2P', Courier, monospace;
+}
+
 p {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
+}
+
+#music-mode {
+    border: 3px solid white;
+    padding: 15px;
+    margin: 10px;
+}
+
+details {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font: bold;
+    cursor: pointer;
+}
+
+#style-dis-in {
+    background: none;
+    transition: none;
+    padding: 0;
+    border: none;
+}
+
+#track-card {
+    border: 3px solid white;
+    margin: 10px;
+    padding: 15px;
+}
+
+#artist-name-track {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+}
+
+audio {
+    margin: 15px;
+}
+
+button {
+    cursor: pointer;
 }
