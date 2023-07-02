@@ -5,7 +5,7 @@ body {
 }
 
 nav {
-    background: grey;
+    background: rgb(89, 89, 89);
     border-radius: 15px;
     margin: 15px;
     padding: 20px;
@@ -20,17 +20,17 @@ a {
 }
 
 a:hover {
-    background: darkgrey;
+    background: rgb(66, 66, 66);
+    transition: 0.5s;
     padding: 15px;
     border-radius: 15px;
-    transition: 0.5s;
 }
 
 #title-nav {
     color: white;
     text-decoration: none;
     font-family: 'Press Start 2P', Arial;
-    margin: 20px;
+    margin: 15px;
 }
 
 section {
@@ -102,4 +102,10 @@ audio {
 
 button {
     cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+    a {
+        display: block
+    }
 }
