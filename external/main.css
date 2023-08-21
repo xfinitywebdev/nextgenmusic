@@ -1,117 +1,118 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
-    background: black;
+  background: black;
 }
 
 nav {
-    background: rgb(89, 89, 89);
-    border-radius: 15px;
-    margin: 15px;
-    padding: 20px;
+  background: rgb(89, 89, 89);
+  border-radius: 15px;
+  margin: 15px;
+  padding: 20px;
 }
 
 a {
-    color: white;
-    text-decoration: none;
-    font-family: monospace;
-    font-size: 20px;
-    margin: 15px;
+  color: white;
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 20px;
+  margin: 15px;
+  display: block;
 }
 
 a:hover {
-    background: rgb(66, 66, 66);
-    transition: 0.5s;
-    padding: 15px;
-    border-radius: 15px;
+  background: rgb(66, 66, 66);
+  transition: 0.5s;
+  padding: 15px;
+  border-radius: 15px;
 }
 
 #title-nav {
-    color: white;
-    text-decoration: none;
-    font-family: 'Press Start 2P', Arial;
-    margin: 15px;
+  color: white;
+  text-decoration: none;
+  font-family: 'Press Start 2P', Arial;
+  margin: 15px;
 }
 
 section {
-    border: 2px solid white;
-    margin: 15px;
-    padding: 15px;
-    border-radius: 20px;
+  border: 2px solid white;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 20px;
 }
 
 h2 {
-    color: white;
-    font-family: 'Press Start 2P', Courier, monospace;
+  color: white;
+  font-family: 'Press Start 2P', Courier, monospace;
 }
 
 h3 {
-    color: white;
-    font-family: 'Press Start 2P', Courier, monospace;
+  color: white;
+  font-family: 'Press Start 2P', Courier, monospace;
 }
 
 h1 {
-    color: white;
-    font-family: 'Press Start 2P', Courier, monospace;
+  color: white;
+  font-family: 'Press Start 2P', Courier, monospace;
 }
 
 p {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
 }
 
 #music-mode {
-    border: 3px solid white;
-    padding: 15px;
-    margin: 10px;
+  border: 3px solid white;
+  padding: 15px;
+  margin: 10px;
 }
 
 details {
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: large;
-    font: bold;
-    cursor: pointer;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
+  font: bold;
+  cursor: pointer;
 }
 
 #style-dis-in {
-    background: none;
-    transition: none;
-    padding: 0;
-    border: none;
-    font: bolder;
+  background: none;
+  transition: none;
+  padding: 0;
+  border: none;
+  font: bolder;
 }
 
 #track-card {
-    border: 3px solid white;
-    margin: 10px;
-    padding: 15px;
+  border: 3px solid white;
+  margin: 10px;
+  padding: 15px;
 }
 
 #artist-name-track {
-    margin: 0;
-    padding: 0;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: large;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
 }
 
 audio {
-    margin: 15px;
+  margin: 15px;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 @media (max-width: 1100px) {
-    a {
-        display: block
-    }
+  a {
+    display: block
+  }
 }
 
 ul {
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
 }
