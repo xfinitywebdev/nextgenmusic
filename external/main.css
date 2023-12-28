@@ -131,3 +131,8 @@ ul {
   justify-content: center;
   align-items: center;
 }
+
+#bmac-click-button {
+  width: 150px;
+  height: 50px;
+}
