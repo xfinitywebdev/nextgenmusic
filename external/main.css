@@ -23,13 +23,6 @@ a {
   border-radius: 15px;
 }
 
-a:hover {
-  background: rgb(66, 66, 66);
-  transition: 0.5s;
-  padding: 15px;
-  border-radius: 15px;
-}
-
 #title-nav {
   color: white;
   text-decoration: none;
