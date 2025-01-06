@@ -18,6 +18,9 @@ a {
   font-size: 20px;
   margin: 15px;
   display: block;
+  background: rgb(66, 66, 66);
+  padding: 15px;
+  border-radius: 15px;
 }
 
 a:hover {
