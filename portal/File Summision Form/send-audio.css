@@ -23,6 +23,30 @@ a {
   border-radius: 15px;
 }
 
+label {
+  color: white;
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 20px;
+  margin: 15px;
+  display: block;
+  background: rgb(66, 66, 66);
+  padding: 15px;
+  border-radius: 15px;
+}
+
+form {
+  color: white;
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 20px;
+  margin: 15px;
+  display: block;
+  background: rgb(66, 66, 66);
+  padding: 15px;
+  border-radius: 15px;
+}
+
 #title-nav {
   color: white;
   text-decoration: none;
