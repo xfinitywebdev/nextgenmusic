@@ -1,14 +1,11 @@
-
-function loadContents() {
-    var infoFile = fetch("database/artist/rtm/albums/the return/the hawk/info.json")
-    fetch('database/artist/rtm/albums/the return/the hawk/info.json')
+fetch('database/artist/rtm/releases/the return/the hawk/info.json')
   .then(response => response.json())
   .then(data => {
-    // Do something with the JSON data
-    console.log(data);
+    for (const key in data) {
+      const element = document.getElementById(key);
+      if (element) {
+        element.textContent = data[key];
+      }
+    }
   })
-  .catch(error => {
-    // Handle any errors
-    console.error(error);
-  });
-}
+  .catch(error => console.error('Error fetching JSON data:', error));
