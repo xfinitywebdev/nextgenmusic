@@ -8,10 +8,6 @@
 </head>
 <body>
 
-    <nav>
-        <a href="index.html">Back</a>
-    </nav>
-
     <div class="container">
         <div class="music-player">
             <audio id="audio" src="0123456789/0123456789.mp3"></audio>
@@ -22,19 +18,25 @@
 
                 <p id="artistName">Artist Name</p>
 
-                <button id="playPauseBtn" class="play-pause-btn">Play</button>
-                <div class="time-display">
-                    <span id="currentTime">00:00</span> / <span id="duration">00:00</span>
-                </div>
+               
+               
                 <div class="progress-container">
                     <input type="range" id="progressBar" value="0" max="100" step="0.1">
                 </div>
+                 <div class="time-display">
+                    <span id="currentTime">00:00</span> / <span id="duration">00:00</span>
+                </div>
+                
+                
+                
+                <button id="backBtn" class="back-btn">Back</button>
+                <button id="playPauseBtn" class="play-pause-btn">Play</button>
+                <button id="skipBtn" class="skip-btn">Next</button>
+
+                <button id="loopBtn" class="loop-btn">Loop</button>
                 <div class="volume-container">
                     <input type="range" id="volumeBar" value="100" max="100">
                 </div>
-                <button id="loopBtn" class="loop-btn">Loop</button>
-                <button id="skipBtn" class="skip-btn">Next</button>
-                <button id="backBtn" class="back-btn">Back</button>
                 
             </div>
         </div>
