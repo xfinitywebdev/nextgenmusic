@@ -50,6 +50,17 @@ body {
   width: 100%;
   background-color: #42547d;
   position:fixed;
+  bottom:75px;
+  left:0;
+  padding: 21px;
+  border-radius: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.player-bar2 {
+  width: 100%;
+  background-color: #ffd;
+  position:fixed;
   bottom:0;
   left:0;
   padding: 21px;
@@ -84,8 +95,10 @@ body {
 }
 
 input[type="range"] {
-  width: 100%;
-  margin: 0 10px;
+  width: 75%;
+  margin:0;
+  right:0;
+  
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -130,7 +143,6 @@ input[type="range"]:focus {
   background-color: #007bff;
   color: white;
   border: none;
-  margin: 15px;
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
@@ -164,9 +176,8 @@ input[type="range"]:focus {
 }
 
 img {
-  width: 150px;
-  height: 150px;
-  margin: 15px;
-  padding: 10
-    px
+  width: 75px;
+  height: 75px;
+  margin: px;
+  padding: px;
 } 
