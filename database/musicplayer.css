@@ -18,6 +18,7 @@ nav {
   margin: 0px;
   padding: 0px;
   position: fixed;
+  left: 0px;
   bottom: 10;
   width: 100%;
 }
@@ -28,6 +29,7 @@ nav {
   margin: 0px;
   padding: 0px;
   position: fixed;
+  left: 0px;
   bottom: 0;
   width: 100%;
 }
