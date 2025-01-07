@@ -6,7 +6,7 @@ body {
 }
 
 nav {
-  background: rgb(89, 89, 89);
+  background: #2b3241;
   border-radius: 15px;
   margin: 15px;
   padding: 20px;
@@ -20,7 +20,7 @@ nav {
 }
 
 ·container {
-  background: rgb(89, 89, 89);
+  background: #42547d;
   border-radius: 15px;
   margin: 15px;
   padding: 20px;
