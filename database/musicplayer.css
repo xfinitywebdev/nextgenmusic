@@ -14,9 +14,12 @@ nav {
 
 #player {
   background: #42547d;
-  border-radius: 15px;
-  margin: 15px;
+  border-radius: 0px;
+  margin: 0px;
   padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 ·container {
