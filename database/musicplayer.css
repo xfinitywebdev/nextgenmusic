@@ -18,6 +18,16 @@ nav {
   margin: 0px;
   padding: 20px;
   position: fixed;
+  bottom: 25;
+  width: 100%;
+}
+
+#player-controls {
+  background: #c0cbe8;
+  border-radius: 0px;
+  margin: 0px;
+  padding: 20px;
+  position: fixed;
   bottom: 0;
   width: 100%;
 }
