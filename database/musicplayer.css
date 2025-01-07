@@ -2,12 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 nav {
-  background: #2b3241;
-  border-radius: 15px;
-  margin: 15px;
-  padding: 20px;
+    background: #2b3241;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 20px;
+    width:100%;
+    position:fixed;
+    top:0;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 20px;
+    margin: 15px;
+    display: block;
+    background: rgb(66, 66, 66);
+    padding: 15px;
+    border-radius: 15px;
+}
 ·container {
   background: #42547d;
   border-radius: 15px;
@@ -32,9 +46,9 @@ body {
 .music-player {
   width: 100%;
   max-width: 1000px;
-  background-color: #333;
-  padding: 20px;
-  border-radius: 10px;
+  background-color: #42547d;
+  padding: 21px;
+  border-radius: 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
