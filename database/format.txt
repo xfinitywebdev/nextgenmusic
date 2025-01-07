@@ -1,0 +1,11 @@
+The format:
+
+Database
+
+Artist Folder
+
+Album Folders
+
+Release Folders (album/ep/single)
+
+Song Files (Hopefully WAV), txt or json file containing relevant information.
