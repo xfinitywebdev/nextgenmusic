@@ -5,7 +5,7 @@ body {
 }
 
 nav {
-  background: rgb(89, 89, 89);
+  background: #2b3241;
   border-radius: 15px;
   margin: 15px;
   padding: 20px;
@@ -34,7 +34,7 @@ section {
   margin: 15px;
   padding: 15px;
   border-radius: 15px;
-  background: rgb(66, 66, 66);
+  background: #21242a;
 }
 
 h2 {
