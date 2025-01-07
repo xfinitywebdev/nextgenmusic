@@ -13,27 +13,17 @@
     </nav>
 
     <div class="container">
-        <div id="player">
-            <span id="songTitle" onload=""></span>
-            <audio id="audio-player" controls>
-                <source id="audio-source" src="0123456789/0123456789.mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-            </audio>
-         
-            <p id="songTitle">The Hawk</p>
-            <p id="songArtist">RTM</p>
-            <img src ="012345678/0123456789.PNG" style="width:50px;height:50px;">
-   
-            
-            <!-- <p id="songAlbum">The Return</p> -->
-            <!-- <p id="trackNumber">4/17</p> -->
-            <!-- <p id="trackID">0123456789</p> -->
-
-            <div id="song-controls">
-                <p>buttons go here</p>
+        <div class="music-player">
+            <audio id="audio" src="0123456789/0123456789.mp3"></audio>
+            <div class="player-bar">
+                <button id="playPauseBtn" class="play-pause-btn">Play</button>
+                <div class="progress-container">
+                    <input type="range" id="progressBar" value="0" max="100" step="0.1">
+                </div>
+                <div class="volume-container">
+                    <input type="range" id="volumeBar" value="100" max="100">
+                </div>
             </div>
-          
-            
         </div>
     </div>
 
