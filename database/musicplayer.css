@@ -163,6 +163,7 @@ ul {
   height: 50px;
 }
 
-img {
+#player {
+  display: flex;
   align-items: center;
 }
