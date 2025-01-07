@@ -6,7 +6,7 @@ const volumeBar = document.getElementById('volumeBar');
 const currentTimeDisplay = document.getElementById('currentTime');
 const durationDisplay = document.getElementById('duration');
 
-// Play/Pause button
+// Play/Pause button functionality
 playPauseBtn.addEventListener('click', () => {
     if (audio.paused) {
         audio.play();
@@ -17,7 +17,7 @@ playPauseBtn.addEventListener('click', () => {
     }
 });
 
-// Format time in minutes and seconds
+// Format time (in seconds) to MM:SS
 function formatTime(seconds) {
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = Math.floor(seconds % 60);
@@ -36,7 +36,7 @@ audio.addEventListener('timeupdate', () => {
     // Update current time display
     currentTimeDisplay.textContent = formatTime(currentTime);
 
-    // Update total duration display
+    // Update total duration display when the duration is available
     if (!isNaN(duration)) {
         durationDisplay.textContent = formatTime(duration);
     }
