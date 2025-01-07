@@ -14,7 +14,6 @@ nav {
   margin: 15px;
   padding: 20px;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -45,7 +44,7 @@ body {
   align-items: center;
 }
 
-.play-pause-btn {
+.play-pause-btn, .loop-btn {
   background-color: #4caf50;
   color: white;
   border: none;
@@ -54,7 +53,7 @@ body {
   cursor: pointer;
 }
 
-.play-pause-btn:hover {
+.play-pause-btn:hover, .loop-btn:hover {
   background-color: #45a049;
 }
 
@@ -92,6 +91,19 @@ input[type="range"]:focus {
   color: white;
   font-size: 14px;
   margin: 0 15px;
+}
+
+/* Style for loop button */
+.loop-btn {
+  background-color: #007bff;
+}
+
+.loop-btn.active {
+  background-color: #ff5722;
+}
+
+.loop-btn:hover {
+  background-color: #0056b3;
 }
 
 img {

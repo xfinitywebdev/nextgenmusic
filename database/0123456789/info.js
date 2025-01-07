@@ -5,6 +5,7 @@ const progressBar = document.getElementById('progressBar');
 const volumeBar = document.getElementById('volumeBar');
 const currentTimeDisplay = document.getElementById('currentTime');
 const durationDisplay = document.getElementById('duration');
+const loopBtn = document.getElementById('loopBtn');
 
 // Play/Pause button functionality
 playPauseBtn.addEventListener('click', () => {
@@ -51,4 +52,16 @@ progressBar.addEventListener('input', () => {
 // Adjust volume
 volumeBar.addEventListener('input', () => {
     audio.volume = volumeBar.value / 100;
+});
+
+// Loop button functionality
+loopBtn.addEventListener('click', () => {
+    audio.loop = !audio.loop; // Toggle the loop property
+
+    // Toggle button active state
+    if (audio.loop) {
+        loopBtn.classList.add('active'); // Mark button as active (looping)
+    } else {
+        loopBtn.classList.remove('active'); // Mark button as inactive (no loop)
+    }
 });
