@@ -3,6 +3,8 @@ const playPauseBtn = document.getElementById('playPauseBtn');
 const audio = document.getElementById('audio');
 const progressBar = document.getElementById('progressBar');
 const volumeBar = document.getElementById('volumeBar');
+const currentTimeDisplay = document.getElementById('currentTime');
+const durationDisplay = document.getElementById('duration');
 
 // Play/Pause button
 playPauseBtn.addEventListener('click', () => {
@@ -15,10 +17,29 @@ playPauseBtn.addEventListener('click', () => {
     }
 });
 
-// Update progress bar
+// Format time in minutes and seconds
+function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+    return `${minutes < 10 ? '0' : ''}${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+}
+
+// Update progress bar and time display
 audio.addEventListener('timeupdate', () => {
-    const progress = (audio.currentTime / audio.duration) * 100;
+    const currentTime = audio.currentTime;
+    const duration = audio.duration;
+    
+    // Update progress bar
+    const progress = (currentTime / duration) * 100;
     progressBar.value = progress;
+
+    // Update current time display
+    currentTimeDisplay.textContent = formatTime(currentTime);
+
+    // Update total duration display
+    if (!isNaN(duration)) {
+        durationDisplay.textContent = formatTime(duration);
+    }
 });
 
 // Seek position when the progress bar changes
