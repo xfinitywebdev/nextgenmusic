@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="main.css">
 </head>
 
+<?php include 'bar.php';?>
+
 <body>
 
   <section>
@@ -16,6 +18,7 @@
     <p>
     </p>
   </section>
+
 
 
   <nav>
