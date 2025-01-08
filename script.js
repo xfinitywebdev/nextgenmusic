@@ -1,4 +1,4 @@
 // script.js
 document.getElementById("ID").textContent = data.songID;
-document.getElementById("Title").textContent = data.songTitle;
-document.getElementById("Artist").textContent = data.songArtist;
+document.getElementById("songTitle").textContent = data.songTitle;
+document.getElementById("songArtist").textContent = data.songArtist;
