@@ -131,9 +131,9 @@ input[type="range"]::-webkit-slider-thumb {
 input[type="range"]::-webkit-slider-runnable-track {
     background-color: red;
     height: 5px;
-    right: 200px;
-    position:fixed;
-    width: 700px;
+    right: 4%;
+    width: 60%;
+    position:absolute;
 }
 
 input[type="range"]:focus {
@@ -145,7 +145,7 @@ input[type="range"]:focus {
 .time-display {
     color: white;
     font-size: 14px;
-    margin: 0 15px;
+    margin: 10px 10px -30px 34px;
 }
 
 /* Style for loop button */
