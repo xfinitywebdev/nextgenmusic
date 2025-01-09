@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NextGen - Home</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="home.css">
+  <title>NextGen Player</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
-
-
 <body>
+  <div class="loading-container" id="loadingContainer">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Loading Player...</div>
+  </div>
 
-  <section>
-    <h2>Welcome to the NextGen music service!</h2>
-    <p>
-      Developed By Evolution Studios & Startup Records
-    </p>
-  </section>
+  <div class="player-container" id="playerContainer">
+    <div id="searchbar">
+      <input type="text" id="searchInput" placeholder="Search for a song..." autocomplete="off">
+    </div>
+    <div id="searchResults"></div>
+    
+    <div class="music-info">
+      <img id="artwork" src="default.png" alt="Album Art">
+      <div class="text-info">
+        <div id="songTitle">Track Name</div>
+        <div id="songArtist">Artist</div>
+      </div>
+    </div>
 
+    <div class="player-controls">
+      <button id="backBtn">Back</button>
+      <button id="playPauseBtn">Play</button>
+      <button id="skipBtn">Next</button>
+      <button id="loopBtn">All</button>
+      <input type="range" id="volumeBar" value="100" max="100">
+    </div>
+  </div>
 
-  <nav>
-    <span id="title-nav"></span>
-    <a href="search.php">Search</a>
-    <a href="bar.html">Music Player</a>
-    <a href="saved.html">Saved Music</a>
-  </nav>
-
+  <script src="script.js"></script>
 </body>
-
 </html>
