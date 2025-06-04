@@ -1,36 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NextGen - Music, made by the community!</title>
-    <link rel="stylesheet" href="external/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NextGen Player</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    .loading-container {
+      text-align: center;
+      color: #ecf0f1;
+      background-color: #2c3e50;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+    .loading-spinner {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #3498db;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 2s linear infinite;
+      margin: 0 auto 20px;
+    }
+
+    .loading-text {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .searchbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #34495e;
+      color: #ecf0f1;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #searchInput {
+      width: 80%;
+      font-size: 1rem;
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      background-color: #2c3e50;
+      color: #ecf0f1;
+    }
+
+    #searchResults {
+      width: 80%;
+      margin: 10px auto 0;
+      max-height: 200px;
+      overflow-y: auto;
+      background-color: #34495e;
+      border-radius: 5px;
+      color: #ecf0f1;
+      position: fixed;
+      top: 10%;
+    }
+
+    .search-result {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .search-result:hover {
+      background-color: #3498db;
+    }
+
+    .search-result img {
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .player-container {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #34495e;
+      color: #ecf0f1;
+      display: flex;
+      align-items: center;
+      padding: 10px 0;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+    }
+
+    .music-info {
+      display: flex;
+      align-items: center;
+      width: 50%;
+      padding: 0 10px;
+    }
+
+    #artwork {
+      width: 50px;
+      height: 50px;
+      border-radius: 5px;
+      margin-right: 10px;
+      background-color: black;
+    }
+
+    .text-info {
+      flex-grow: 1;
+    }
+
+    .text-info #songTitle {
+      font-weight: bold;
+      font-size: 1rem;
+      color: #ecf0f1;
+    }
+
+    .text-info #songArtist {
+      font-size: 0.9rem;
+      color: #bdc3c7;
+    }
+
+    .player-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 30%;
+      margin: 0 10px;
+    }
+
+    button {
+      background: #3498db;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 1rem;
+      color: #ecf0f1;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #2980b9;
+    }
+
+    #volumeBar {
+      width: 100px;
+      cursor: pointer;
+      background-color: #34495e;
+      height: 5px;
+      border-radius: 5px;
+    }
+
+    #volumeBar::-webkit-slider-thumb {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #3498db;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      #artwork {
+        width: 40px;
+        height: 40px;
+      }
+
+      .player-controls button {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+      }
+
+      #volumeBar {
+        width: 80px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <span id="title-nav">NextGen</span>
-        <a href="/index.html">Home</a>
-        <a href="portal/explore.html">Explore!</a>
-        <a href="portal/artists.html">Find an artist!</a>
-        <a href="portal/File Summision Form/send-audio.html">Submit a song!</a>
-    </nav>
-    <section>
-        <h2>Welcome to NextGen music service!</h2>
-        <p>
-            NextGen has all of the greatest gaming music! From regular gaming music for content makers to game  soundtracks from popular games. We’ve got you covered! Most soundtracks will not release until requested service has been arranged, so please be patient until all music comes out. 
-        </p>
-    </section>
-    <section>
-        <h2>Stay connected!</h2>
-        <p>
-            Follow me on these platforms!<br>
-            Heres my Discord tag: xfinityweb#2847<br>
-            Because Discord is being gay, my regular user is still 'xfinitydev'
-        </p>
-        <ul>
-            <a href="https://discord.gg/95uE8StaR9" target="_blank" id="style-dis-in">Discord</a>
-            <a href="https://soundcloud.com/xfinitywebdev" target="_blank" id="style-dis-in">Developer's SoundCloud</a>
-        </ul>
-    </section>
+  <div class="loading-container" id="loadingContainer">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Loading Player...</div>
+  </div>
+
+  <div class="searchbar">
+    <input type="text" id="searchInput" placeholder="Search for a song...">
+  </div>
+  <div id="searchResults"></div>
+
+  <div class="player-container" id="playerContainer" style="display: none;">
+    <div class="music-info">
+      <img id="artwork" src="default.png" alt="Album Art">
+      <div class="text-info">
+        <div id="songTitle">Track Name</div>
+        <div id="songArtist">Artist</div>
+      </div>
+    </div>
+    <div class="player-controls">
+      <button id="backBtn">Back</button>
+      <button id="playPauseBtn">Play</button>
+      <button id="skipBtn">Next</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const audioElement = document.createElement("audio");
+      audioElement.id = "audio";
+      document.body.appendChild(audioElement);
+
+      const loadingContainer = document.getElementById("loadingContainer");
+      const playerContainer = document.getElementById("playerContainer");
+
+      const artworkElement = document.getElementById("artwork");
+      const songTitleElement = document.getElementById("songTitle");
+      const songArtistElement = document.getElementById("songArtist");
+      const playPauseBtn = document.getElementById("playPauseBtn");
+      const backBtn = document.getElementById("backBtn");
+      const skipBtn = document.getElementById("skipBtn");
+      const volumeBar = document.getElementById("volumeBar");
+
+      const playlist = ["0123456789", "9876543210", "1111111111"];
+      let currentSongIndex = 0;
+
+      const fetchSongData = async (songID) => {
+        try {
+          const response = await fetch(`database/${songID}/data.json`);
+          if (!response.ok) throw new Error(`Failed to fetch data for songID: ${songID}`);
+          return await response.json();
+        } catch (error) {
+          console.error(error);
+          return null;
+        }
+      };
+
+      const loadSong = async (index) => {
+        const songID = playlist[index];
+        if (!songID) return;
+
+        const songData = await fetchSongData(songID);
+        if (songData) {
+          audioElement.src = songData.audioSrc;
+          artworkElement.src = songData.artworkSrc || "default.png";
+          songTitleElement.textContent = songData.title || "Track Name";
+          songArtistElement.textContent = songData.artist || "Artist";
+
+          playPauseBtn.textContent = "Play";
+          audioElement.pause();
+        } else {
+          console.error(`Failed to load song with ID: ${songID}`);
+        }
+      };
+
+      // Show the loading screen
+      loadingContainer.style.display = 'flex';
+
+      // Simulate delay to keep the loading screen visible for a moment
+      setTimeout(() => {
+        loadingContainer.style.display = 'none'; // Hide the loading screen
+        playerContainer.style.display = 'flex'; // Show the player once loaded
+      }, 1000); // You can adjust the timeout duration here
+
+      loadSong(currentSongIndex);
+
+      playPauseBtn.addEventListener("click", () => {
+        if (audioElement.paused) {
+          audioElement.play();
+          playPauseBtn.textContent = "Stop";
+        } else {
+          audioElement.pause();
+          playPauseBtn.textContent = "Play";
+        }
+      });
+
+      backBtn.addEventListener("click", () => {
+        currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
+        loadSong(currentSongIndex);
+        audioElement.play();
+        playPauseBtn.textContent = "Stop";
+      });
+
+      skipBtn.addEventListener("click", () => {
+        currentSongIndex = (currentSongIndex + 1) % playlist.length;
+        loadSong(currentSongIndex);
+        audioElement.play();
+        playPauseBtn.textContent = "Stop";
+      });
+
+      volumeBar.addEventListener("input", () => {
+        audioElement.volume = volumeBar.value / 100;
+      });
+    });
+  </script>
 </body>
 </html>
